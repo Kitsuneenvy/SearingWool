@@ -8,7 +8,8 @@ public class Manager : MonoBehaviour {
 	public bool rotateCamera = false;
 	public Texture cameraIcon;
 	public Texture rotateIcon;
-	int currentLayer = 1;
+	public int currentLayer = 1;
+	string debugString = "";
 
 
 	// Use this for initialization
@@ -18,7 +19,6 @@ public class Manager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
 	}
 
 	void OnGUI() {
@@ -38,6 +38,7 @@ public class Manager : MonoBehaviour {
 			}
 		}
 		GUILayout.Label(currentLayer.ToString());
+		GUILayout.Label(debugString.ToString());
 		if(GUILayout.Button("->")){
 			if(currentLayer<worldSettingsObject.GetComponent<WorldSettings>().Layers.Count){
 				currentLayer++;
@@ -49,6 +50,13 @@ public class Manager : MonoBehaviour {
 
 	public int returnCurrentLayer(){
 		return currentLayer;
+	}
+
+	public void setCurrentLayer(int x){
+		currentLayer = x;
+	}
+	public void setDebugString(string x){
+		debugString = x;
 	}
 	
 }
