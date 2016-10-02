@@ -12,6 +12,7 @@ public class Manager : MonoBehaviour {
 	string debugString = "";
 	public Texture2D counterBackground = null;
 	public Texture2D pauseButton = null;
+	public Texture2D playButton = null;
 	Rect counterRect = new Rect(0,0,0,0);
 	Rect pauseRect = new Rect(0,0,0,0);
 	Rect menuRect = new Rect(0,0,0,0);
@@ -55,7 +56,7 @@ public class Manager : MonoBehaviour {
 
 	void menuFunction(int id){
 		GUILayout.BeginVertical();
-		if(GUILayout.Button("Unpause")){
+		if(GUILayout.Button(playButton)){
 			menuOpen = false;
 		}
 		if(GUILayout.Button("Quit")){

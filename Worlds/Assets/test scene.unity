@@ -224,6 +224,7 @@ MonoBehaviour:
   currentLayer: 1
   counterBackground: {fileID: 2800000, guid: 3f31cdb6907ba664bbf6c2e5001b6cc9, type: 3}
   pauseButton: {fileID: 2800000, guid: 440bd0b3905f1424abb188ee7e9634b9, type: 3}
+  playButton: {fileID: 2800000, guid: de762072f00b8cf4987eccc34f5f3ab3, type: 3}
   counterFont:
     m_Name: 
     m_Normal:
@@ -465,19 +466,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a5793c378a6ff834f9f2836da1edde40, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: -0.7069317
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a5793c378a6ff834f9f2836da1edde40, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.015733963
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a5793c378a6ff834f9f2836da1edde40, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.015733963
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a5793c378a6ff834f9f2836da1edde40, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.7069317
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a5793c378a6ff834f9f2836da1edde40, type: 3}
       propertyPath: m_RootOrder
@@ -486,6 +487,18 @@ Prefab:
     - target: {fileID: 100000, guid: a5793c378a6ff834f9f2836da1edde40, type: 3}
       propertyPath: m_TagString
       value: Layer
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a5793c378a6ff834f9f2836da1edde40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a5793c378a6ff834f9f2836da1edde40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -2.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a5793c378a6ff834f9f2836da1edde40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5793c378a6ff834f9f2836da1edde40, type: 3}
