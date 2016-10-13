@@ -31,7 +31,7 @@ public class Layer : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if(Input.GetKey(KeyCode.LeftArrow)){
 			rotateTowardsNearestAngle();
 		}
@@ -46,7 +46,6 @@ public class Layer : MonoBehaviour {
 				transform.eulerAngles = target;
 				lerping = false;
 				worldSettingsObject.busy = false;
-				Debug.Log((originalAngle-newAngle).ToString());
 				if(newAngle!=originalAngle){
 					worldSettingsObject.decreaseTurns();
 				}

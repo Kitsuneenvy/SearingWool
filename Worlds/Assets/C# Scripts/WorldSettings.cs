@@ -13,6 +13,7 @@ public class WorldSettings : MonoBehaviour
 	bool shifting = false;
 	bool tappedLayer = false;
 	bool clockwise = false;
+	[HideInInspector]
 	public bool busy = false;
 	RaycastHit touchHit;
 	GameObject managerObject;
@@ -51,7 +52,7 @@ public class WorldSettings : MonoBehaviour
 		}
 	}
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
 	{
 		if(busy==false){
 			if (shifting == false) {
