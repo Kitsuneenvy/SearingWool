@@ -12,6 +12,7 @@ public class Menu : MonoBehaviour {
 	bool lerping = false;
 	float initialDistance = 0;
 	Vector2 touchDeltaPosition;
+	public GameObject sun;
 
 	// Use this for initialization
 	void Start () {
@@ -96,4 +97,6 @@ public class Menu : MonoBehaviour {
 		float distanceTravelled = initialDistance-distanceRemaining;
 		transform.position = Vector3.Lerp(transform.position,lerpTarget,(distanceTravelled/initialDistance)/10);
 	}
+
+
 }
