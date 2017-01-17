@@ -18,6 +18,7 @@ public class Manager : MonoBehaviour {
 	Rect menuRect = new Rect(0,0,0,0);
 	bool menuOpen = false;
 	public GUIStyle counterFont;
+	public float sensitivityValue = 1;
 
 
 	// Use this for initialization
@@ -29,7 +30,7 @@ public class Manager : MonoBehaviour {
 		pauseRect.height = pauseButton.height;
 		menuRect.x = Screen.width/3;
 		menuRect.y = Screen.height/5;
-		menuRect.width = Screen.width/3;
+		menuRect.width = Screen.width/2;
 		menuRect.height = Screen.height/3;
 		worldSettingsObject = GameObject.FindGameObjectWithTag("WorldObject");
 	}
@@ -59,6 +60,8 @@ public class Manager : MonoBehaviour {
 		if(GUILayout.Button(playButton)){
 			menuOpen = false;
 		}
+		sensitivityValue = GUILayout.HorizontalSlider(sensitivityValue,0.5f,2);
+		GUILayout.Label("Sensitivity = " + sensitivityValue.ToString());
 		if(GUILayout.Button("Quit")){
 			Application.Quit();
 		}
@@ -74,6 +77,10 @@ public class Manager : MonoBehaviour {
 	}
 	public void setDebugString(string x){
 		debugString = x;
+	}
+
+	public void toggleMenu(bool open){
+		menuOpen = open;
 	}
 	
 }

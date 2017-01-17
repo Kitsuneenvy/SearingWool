@@ -292,6 +292,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
+  sensitivityValue: 1
 --- !u!4 &71710505
 Transform:
   m_ObjectHideFlags: 0

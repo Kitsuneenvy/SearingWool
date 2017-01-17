@@ -56,6 +56,17 @@ public class WorldSettings : MonoBehaviour
 	{
 		if(busy==false){
 			if (shifting == false) {
+				float highestRotation = 0;
+				foreach(GameObject layer in Layers){
+					if(layer.transform.localRotation.z > highestRotation){
+						highestRotation = layer.transform.localRotation.z;
+					}
+
+				}
+				if(highestRotation==0){
+					//victory
+					managerObject.GetComponent<Manager>().toggleMenu(true);
+				}
 				if (Input.touchCount == 1 && Input.GetTouch (0).phase == TouchPhase.Began) {
 					Ray touchRay = Camera.main.ScreenPointToRay (new Vector3 (Input.GetTouch (0).position.x, Input.GetTouch (0).position.y, 0));
 					if (Physics.Raycast (touchRay, out touchHit) && touchHit.transform.tag == "Layer") {
@@ -71,10 +82,10 @@ public class WorldSettings : MonoBehaviour
 						float touchDeltaY = Input.GetTouch (0).deltaPosition.y;
 						Layers [managerObject.GetComponent<Manager> ().returnCurrentLayer () - 1].GetComponent<Layer> ().setOriginalAngle();
 						if (touchDeltaX > 0 && touchDeltaY < 1 && touchDeltaY > -1) {
-							Layers [managerObject.GetComponent<Manager> ().returnCurrentLayer () - 1].GetComponent<Layer> ().transform.Rotate (new Vector3 (0, 0, 1), -touchDeltaX*16);
+							Layers [managerObject.GetComponent<Manager> ().returnCurrentLayer () - 1].GetComponent<Layer> ().transform.Rotate (new Vector3 (0, 0, 1), -touchDeltaX*managerObject.GetComponent<Manager>().sensitivityValue);
 						}
 						if (touchDeltaX < 0 && touchDeltaY < 1 && touchDeltaY > -1) {
-							Layers [managerObject.GetComponent<Manager> ().returnCurrentLayer () - 1].GetComponent<Layer> ().transform.Rotate (new Vector3 (0, 0, 1), -touchDeltaX*16);
+							Layers [managerObject.GetComponent<Manager> ().returnCurrentLayer () - 1].GetComponent<Layer> ().transform.Rotate (new Vector3 (0, 0, 1), -touchDeltaX*managerObject.GetComponent<Manager>().sensitivityValue);
 						}
 					}
 					if (Input.touchCount > 0 && Input.GetTouch (0).phase == TouchPhase.Ended) {

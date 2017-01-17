@@ -59,12 +59,12 @@ public class Layer : MonoBehaviour {
 
 	public void rotateClockwise(){
 		//transform.RotateAround(worldObject.transform.position,Vector3.up,90);
-		transform.Rotate(new Vector3(0, 0, 1), 5);
+		transform.Rotate(new Vector3(0, 0, 1), 2);
 	}
 
 	public void rotateCounterClockwise(){
 		//transform.RotateAround(worldObject.transform.position,Vector3.up,-90);
-		transform.Rotate(new Vector3(0, 0, 1), -5);
+		transform.Rotate(new Vector3(0, 0, 1), -2);
 	}
 
 	public void rotateCounterClockwiseInitialise(){
