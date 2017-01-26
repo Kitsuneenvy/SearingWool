@@ -75,30 +75,57 @@ public class Layer : MonoBehaviour {
 	}
 
 	void findNearestAngle(){
-		if(transform.eulerAngles.y>315&& transform.eulerAngles.y<360){
-			nearestDirection = 0;
-		} 
-		if (transform.eulerAngles.y>270 && transform.eulerAngles.y<315){
-			nearestDirection = 270;
-		} 
-		if (transform.eulerAngles.y>225 && transform.eulerAngles.y<270){
-			nearestDirection = 270;
-		} 
-		if (transform.eulerAngles.y>180 && transform.eulerAngles.y<225){
-			nearestDirection = 180;
-		} 
-		if (transform.eulerAngles.y>135 && transform.eulerAngles.y<180){
-			nearestDirection = 180;
-		} 
-		if (transform.eulerAngles.y>90 && transform.eulerAngles.y<135){
+		nearestDirection = 0;
+		if(transform.eulerAngles.y>22.5f){
+			nearestDirection = 45;
+		}
+		if(transform.eulerAngles.y>67.5f){
 			nearestDirection = 90;
-		} 
-		if (transform.eulerAngles.y>45 && transform.eulerAngles.y<90){
-			nearestDirection = 90;
-		} 
-		if (transform.eulerAngles.y>0 && transform.eulerAngles.y<45){
+		}
+		if(transform.eulerAngles.y>112.5f){
+			nearestDirection = 135;
+		}
+		if(transform.eulerAngles.y>157.5f){
+			nearestDirection = 180;
+		}
+		if(transform.eulerAngles.y>202.5f){
+			nearestDirection = 225;
+		}
+		if(transform.eulerAngles.y>247.5f){
+			nearestDirection = 270;
+		}
+		if(transform.eulerAngles.y>292.5f){
+			nearestDirection = 315;
+		}
+		if(transform.eulerAngles.y>337.5f){
 			nearestDirection = 0;
 		}
+
+
+//		if(transform.eulerAngles.y>315&& transform.eulerAngles.y<360){
+//			nearestDirection = 0;
+//		} 
+//		if (transform.eulerAngles.y>270 && transform.eulerAngles.y<315){
+//			nearestDirection = 270;
+//		} 
+//		if (transform.eulerAngles.y>225 && transform.eulerAngles.y<270){
+//			nearestDirection = 270;
+//		} 
+//		if (transform.eulerAngles.y>180 && transform.eulerAngles.y<225){
+//			nearestDirection = 180;
+//		} 
+//		if (transform.eulerAngles.y>135 && transform.eulerAngles.y<180){
+//			nearestDirection = 180;
+//		} 
+//		if (transform.eulerAngles.y>90 && transform.eulerAngles.y<135){
+//			nearestDirection = 90;
+//		} 
+//		if (transform.eulerAngles.y>45 && transform.eulerAngles.y<90){
+//			nearestDirection = 90;
+//		} 
+//		if (transform.eulerAngles.y>0 && transform.eulerAngles.y<45){
+//			nearestDirection = 0;
+//		}
 	}
 
 	public void rotateTowardsNearestAngle(){
@@ -115,6 +142,5 @@ public class Layer : MonoBehaviour {
 
 	public void setOriginalAngle(){
 		originalAngle = (int)transform.eulerAngles.y;
-		Debug.Log(originalAngle.ToString());
 	}
 }
