@@ -5,7 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Menu Scene.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Fantasy Stage 01.unity
+  - enabled: 1
+    path: Assets/Fantasy/Fantasy Stage 01.unity
